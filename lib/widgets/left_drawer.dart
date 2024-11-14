@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vin_shop/screens/list_productentry.dart';
 import 'package:vin_shop/screens/menu.dart';
 import 'package:vin_shop/screens/productentry_form.dart';
 
@@ -64,6 +65,17 @@ class LeftDrawer extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (context) => const ProductEntryFormPage(),
                 ),
+              );
+            },
+          ),
+        ListTile(
+          leading: const Icon(Icons.add_reaction_rounded),
+          title: const Text('Product List'),
+          onTap: () {
+              // Route to the mood page
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProductEntryPage()),
               );
             },
           ),
